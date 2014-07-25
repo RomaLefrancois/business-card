@@ -61,7 +61,13 @@ textarea {
 Author's custom styles
 ========================================================================== */
 
+/* General */
 
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
 
 
 
