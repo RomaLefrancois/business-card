@@ -234,6 +234,11 @@ a.mail i:before {font-size: 150%;}
 /* Mobile CSS */
 
 @media only screen and (max-width : 480px) {
+  body {
+    background: url(../img/cover-m.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
   .wrap {
     overflow-y: scroll;
   }
