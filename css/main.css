@@ -94,6 +94,17 @@ Author's custom styles
 .icon-mail-alt:before { content: '\e802'; }
 .icon-github-circled:before { content: '\e803'; }
 
+a {
+  color: #90a4ae;
+  -webkit-transition: color .3s;
+  -moz-transition: color .3s;
+  -o-transition: color .3s;
+  -ms-transition: color .3s;
+  transition: color .3s;
+}
+a:visited {color: #90a4ae;}
+
+html {height: 100%;}
 
 body {
   min-width: 320px;
@@ -107,32 +118,218 @@ body {
   font-weight: 300;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
+.wrap {
+  height: 100%;
+  text-align:center;
+  overflow: hidden;
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
+.wrap:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
+
+/* Card */
+
+#card {
+  width: 500px;
+  max-width: 90%;
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 1px 2px #777;
+  border-radius: 2px;
+  text-align:left;
+  -webkit-animation: enter .5s .5s ease both;
+  -moz-animation: enter .5s .5s ease both;
+  -o-animation: enter .5s .5s ease both;
+  animation: enter .5s .5s ease both;
+}
+
+/* Profile picture */
+
+#picture {
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 1.5em;
+  left: 2em;
+  overflow: hidden;
+  background-color: #cacccd;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+#picture img {
+  height: 100%;
+}
+
+/* Header with name and title */
+
+#header {
+  padding: 1.5em 1.5em 1em 10em;
+  color: #fff;
+  background: rgba(96, 125, 139, 0.8);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #607d8b), color-stop(100%, #b0bec5));
+  background: -o-linear-gradient(left, #607d8b 0%, #b0bec5 100%);
+  background: -ms-linear-gradient(left, #607d8b 0%, #b0bec5 100%);
+  background: linear-gradient(to right, #607d8b 0%, #b0bec5 100%);
+}
+
+#name {
+  font-size: 1.6em;
+  margin-bottom: .3em;
+}
+#name b {font-weight: 400;}
+
+#job {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* Body with bio */
+
+#body {padding: 1em 2em;}
+
+/* Footer with links */
+
+#footer {
+  width: 100%;
+  display: table;
+  position: relative;
+  bottom: 0;
+  border-top: 1px solid #cfd8dc;
+}
+
+#footer > a {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+}
+
+#footer > a span {display: none;}
+#footer a:active {color: #fff}
+a.twitter:hover {color: #00aced;}
+a.twitter:active {background: #00aced;}
+a.linkedin:hover {color: #007bb6;}
+a.linkedin:active {background: #007bb6;}
+a.github:hover {color: #444;}
+a.github:active {background: #444;}
+a.mail:hover {color: #dd2c00;}
+a.mail:active {background: #dd2c00;}
+a.mail i:before {font-size: 150%;}
+
+/* Link to GitHub repository */
+
+#gh-link {
+  color: #777;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+#gh-link:hover {color: #fff;}
+
+/* Mobile CSS */
+
+@media only screen and (max-width : 480px) {
+  .wrap {
+    overflow-y: scroll;
+  }
+
+  #card {
+    margin: 20px 0;
+  }
+
+  #header{
+    padding: 1em 1em 2.5em;
+    text-align: center;
+    font-size: .9em;
+  }
+
+  #picture {
+    position: relative;
+    top: -25px;
+    margin: 0px auto;
+    left: initial;
+  }
+
+  #body {padding: 0em 1.5em .5em;margin-top:-1em}
+
+  #footer {
+    font-size: .8em;
+    bottom: 0;
+    border: 0;
+  }
+
+  #footer > a {
+    border-top: 1px solid #cfd8dc;
+    display: block;
+    padding: 1em 1em 1em 2em;
+    text-align: left;
+  }
+
+  #footer > a span {
+    display: inline-block;
+    padding-left: 1.5em;
+    font-size: 1.1em;
+  }
+
+  #gh-link {display: none;}
+}
+
+/*Keyframe Animation */
+
+@-webkit-keyframes enter {
+  from {
+    transform:translateY(5rem);
+    opacity:0;
+  }
+}
+@-webkit-keyframes enter {
+  from {
+    transform:translateY(5rem) rotate(10deg);
+    opacity:0;
+  }
+}
+@-moz-keyframes enter {
+  from {
+    transform:translateY(5rem);
+    opacity:0;
+  }
+}
+@-moz-keyframes enter {
+  from {
+    transform:translateY(5rem) rotate(10deg);
+    opacity:0;
+  }
+}
+@-o-keyframes enter {
+  from {
+    transform:translateY(5rem);
+    opacity:0;
+  }
+}
+@-o-keyframes enter {
+  from {
+    transform:translateY(5rem) rotate(10deg);
+    opacity:0;
+  }
+}
+@keyframes enter {
+  from {
+    transform:translateY(5rem);
+    opacity:0;
+  }
+}
+@keyframes enter {
+  from {
+    transform:translateY(5rem) rotate(10deg);
+    opacity:0;
+  }
+}
+
 
 /* ==========================================================================
 Helper classes
