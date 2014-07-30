@@ -191,7 +191,12 @@ body {
 
 /* Body with bio */
 
-#body {padding: 1em 2em;}
+#body {padding: 2em 1em 1em 2em;}
+
+#body p {
+  margin: 0.5em 0;
+  color: #263238;
+}
 
 /* Footer with links */
 
