@@ -108,6 +108,7 @@ html {height: 100%;}
 
 body {
   min-width: 320px;
+  min-height: 500px;
   height: 100%;
   background: url(../img/cover-d.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
