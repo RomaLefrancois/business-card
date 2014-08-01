@@ -228,16 +228,6 @@ a.mail:hover {color: #dd2c00;}
 a.mail:active {background: #dd2c00;}
 a.mail i:before {font-size: 150%;}
 
-/* Link to GitHub repository */
-
-#gh-link {
-  color: #777;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-}
-#gh-link:hover {color: #fff;}
-
 /* Mobile CSS */
 
 @media only screen and (max-width : 480px) {
@@ -287,8 +277,6 @@ a.mail i:before {font-size: 150%;}
     padding-left: 1.5em;
     font-size: 1.1em;
   }
-
-  #gh-link {display: none;}
 }
 
 /*Keyframe Animation */
